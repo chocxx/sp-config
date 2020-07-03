@@ -1,0 +1,25 @@
+#应用名
+spring:
+  application:
+    name: zuul
+    
+#端口
+server:
+  port: 3001
+  
+#eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+  
+#zuul网关
+#zuul:
+#  routes:
+#    item-service: /item-service/**
+#    user-service: /user-service/**
+#    order-servcie: /order-service/**
+
+#开启重试
+zuul:
+  retryable: true
